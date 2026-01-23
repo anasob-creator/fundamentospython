@@ -27,7 +27,7 @@ salario_total=0.0
 if (horas_trabajadas>36):
     horas_extra=horas_trabajadas-36
     salario_extras=horas_extra*(importe_hora*1.5)
-    salario_base=(36*importe_hora)
+    salario_base=(horas_trabajadas*importe_hora)
 else:
     salario_base=horas_trabajadas*importe_hora
 # Calculamos el destino
