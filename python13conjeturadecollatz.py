@@ -19,5 +19,3 @@ while (numero!=1):
         # número impar
         numero=(numero*3)+1
 print("Fin del programa")
-
-
