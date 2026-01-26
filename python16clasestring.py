@@ -97,3 +97,15 @@ texto="primer python"
 # # objeto [inicio:final]
 # texto[0:2] ---->pr
 print("------------------------ EJEMPLOS ------------------------------ ")
+print("Ejemplos clase STRING")
+# probando diferentes métodos
+print("upper ", texto.upper())
+print("lower ", texto.lower())
+print("replace ", texto.replace("o", "@"))
+print("Letra 0: ", texto [0])
+print("Longitud: ", len(texto))
+print("find(p): ", texto.find("p"))
+print("find(z): ", texto.find("z"))
+# Sobrecarga de un método. le añades parámetros extra
+print("find(p, index):", texto.find("p", 1))
+print("find(p, index):", texto.rfind("p", 1))
