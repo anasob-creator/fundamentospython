@@ -108,4 +108,22 @@ print("find(p): ", texto.find("p"))
 print("find(z): ", texto.find("z"))
 # Sobrecarga de un método. le añades parámetros extra
 print("find(p, index):", texto.find("p", 1))
-print("find(p, index):", texto.rfind("p", 1))
+print("find(p, index):", texto.rfind("p"))
+print("startswith (a): ", texto.startswith("a"))
+print("endswith (n): ", texto.endswith("n"))
+print("isdigit (): ", texto.isdigit())
+print("isalpha (): ", texto.isalpha()) 
+print("isalnum (): ", texto.isalnum()) #es alphanumerico 
+# probamos SLICING, llamados substring
+# Recuperar una parte de un texto
+subcadena=texto[2:]
+print("texto [2:]", subcadena)
+# también podemos recuperar desde una posición a otra posición
+subcadena=texto[2:7]
+print("texto [2:]", subcadena)
+# Podemos recorrer cada caracter con un bucle
+longitud=len(texto)  #en el contador de textos siempre el valor será la longitud porque nunca irá hasta el final.
+for i in range (longitud):
+    letra=texto[i]
+    print("letra []" +str(i)+ "] =" + letra)
+          
