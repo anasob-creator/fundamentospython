@@ -8,9 +8,7 @@ for i in range(1, 10+1):
     # multiplicamos
     total=int(numero*i)
     # mostramos el resultado
-    print(total)
+    print(str(numero), "x", str(i), "=", str(total))
     #sumamos a la variable total
     total=total+1
 print("Fin del programa")
-  
-
