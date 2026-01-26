@@ -28,5 +28,17 @@ while (contador<=5):
     print("Contador: ", contador)
     # Incrementamos el contador para que llegue a la condición de salida
     contador=contador+1
+# En el bucle FOR, se declara la variable dentro del propio bucle
+print("Bucle for")
+# Dicha variable suele llamarse i, z, k, 
+# vamos a hacer un bucle for de 0 a 5
+for i in range(5+1):
+    print("Valor de i: ", i)
+# Siempre hay que poner el valor final +1 porque el rango es exclusivo (cuenta como un menor que)
+# Tenemos la posibilidad de iniciar el contador en otro valor
+# Un número final 2--8
+print("Bucle for con inicio y final")
+for z in range(2, 8+1):
+    print("Valor de z: ", z)
 print("Fin del programa")
    
