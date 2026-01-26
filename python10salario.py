@@ -8,9 +8,7 @@
 ##Sobre el precio final obtenido del salario: Cantidades menores o iguales a 250 € no soportan retención 0%Cantidades por encima de 250 € y menores o iguales a 500 € la retención es del 20%Cantidades por encima de 500 € la retención es del 50%
 ##Aplicaremos el IVA (16%) al salario bruto y se lo restaremos para conseguir el salario neto del trabajador.
 ##Al final debemos mostrar el siguiente informe:
-
-##INTRODUZCA HORAS SEMANALES        INTRODUZCA IMPORTE HORA:        INTRODUZCA KILOMETROS:          
-269                             
+##INTRODUZCA HORAS SEMANALES        INTRODUZCA IMPORTE HORA:        INTRODUZCA KILOMETROS:                                      
 ## Solicitamos los datos al usuario
 horas_trabajadas=int(input("Introduzca las horas trabajadas en la semana: "))
 importe_hora=float(input("Introduzca el importe por hora trabajada: "))
