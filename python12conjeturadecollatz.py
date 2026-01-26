@@ -7,12 +7,17 @@
 # No se puede hacer con un for, porque no sabemos el número de repeticiones, usaremos un while
 print("#########Conjetura de Collatz##########")
 numero=int(input("Dame un número: "))   
+ # Pedimos el número al usuario
 print("Secuencia de Collatz para el número ", numero)
+ # Introducimos while y le ponemos la condición de salida,que será cuando el número sea diferente de 1.
 while (numero!=1):
     print(numero)
     if (numero%2==0):
-        # número par
-        numero=numero/2
+        # el número par
+        numero=int(numero/2)
     else:
         # número impar
         numero=(numero*3)+1
+print("Fin del programa")
+
+
