@@ -126,4 +126,12 @@ longitud=len(texto)  #en el contador de textos siempre el valor será la longitu
 for i in range (longitud):
     letra=texto[i]
     print("letra []" +str(i)+ "] =" + letra)
-          
+# en el FOR tenemos que meterle el número del INDICE, no con la longitud, sería LONGITUD
+# Sin embargo en el WHILE, podemos trabajar directamente con el número de la longitud.
+# Esto se usa para validar
+print("Introduce un número")
+dato=input()
+if(dato.isdigit() == True):
+    print("Me has dado un número")
+else:
+    print("Que me des un número!!!")
