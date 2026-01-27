@@ -7,8 +7,11 @@
 print("---------- Validar ISBN -----------")
 isbn=str(input("Escribe un número: "))
 print(isbn)
- #Declaramos la variable aquí para que sume
-suma=0
+ #Declaramos la variable aquí para que sum
+if(len(isbn) !=10):
+    print("el ISBN debe tener 10 caracteres")
+else:
+    suma=0
 if isbn.isdigit() ==False:
     print("No son números, escribe números")
 else:
@@ -24,7 +27,7 @@ else:
         producto=numero*(i+1)
         suma=producto+suma
     print(suma)
-    if suma % 11 == 0:
+    if (suma % 11 == 0):
         print("El ISBN es correcto")
     else:
         print("El ISBN no es correcto")
