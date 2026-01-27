@@ -44,5 +44,17 @@ print("Ejemplo de métodos")
 primerMetodo()
 segundoMetodo()
 print("Fin del programa")
+## # # # # # #  Parámetros en los métodos # # # # # # # # # # # 
+#  Un método puede recibir parámetros, info que necesita el método para poder ser ejecutado.
+#  Se reciben dentro de los parámetros, si recibimos más de uno, irán separados por comas
+#  Las variables que enviamos y las que declaramos NO tienen que coincidir, son distintos nombres.
+#  Los parámetros solamente se pueden utilizar dentro del método.
+# Creamos un nuevo programa.
+
+#  Los métodos los podemos dividir en 2 grupos
+#Los métodos de acción: ejecutan una serie de acciones
+# Los métodos return: ejecutan una serie de acciones y devuelven un valor después de ejecutar dichas acciones
+#  Método de acción: print() (hace algo)
+#  Método de return: len(). (devuelve algo)
 
 
