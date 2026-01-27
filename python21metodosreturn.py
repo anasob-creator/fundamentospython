@@ -14,5 +14,28 @@ def convertirMinusculas(texto):
 def concatenar(texto1,texto2):
     resultado=texto1+texto2
     return resultado
-
+# un método de acción
+def mostrarMenu():
+    print("Seleccione una opción: ")
+    print("1. Convertir a mayúsculas")
+    print("2. Convertir a minúsculas")
+    print("3. Concatenar")
+# Aquí hacemos el programa MAIN
+print("Ejemplos de método return")
+print("Introduce un texto: ")
+valor=input()
+mostrarMenu()
+opcion=int(input())
+resultado=""
+if (opcion ==1):
+    resultado=convertirMayusculas(valor)
+elif(opcion==2):
+    resultado=convertirMinusculas(valor)
+elif(opcion==3):
+    print("dame otro texto")
+    otro_texto=input()
+    resultado=concatenar(valor,otro_texto)
+print("resultado")
+print("Fin de programa")
+# Tengo que guardar el valor del return para poder mostrarlo
 
