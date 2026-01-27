@@ -26,6 +26,23 @@
 # Si están en el mismo lo primero que se escriben son dichos métodos.
 # Los métodos o funciones pueden recibir parámetros
 # (el email recibido es un parámetro.)
-# SINTAXIS
+####################### SINTAXIS ##################################
+# Si voy a poner los métodos en el mismo fichero, lo primero los métodos
+# La sintaxis de los métodos se escriben con la segunda inicial y siguientes en mayúscula
+# primer()
+# primerMetodo()
+# Declaración del método
+def primerMetodo():
+    # Este código jamás se ejecuta
+    print("Primer metodo")
+def segundoMetodo():
+    # Este código jamás se ejecuta
+    print("Segundo metodo")
+print("Ejemplo de métodos")
+# ahora si se ejecuta solo ejecutará el print, a no ser que lo llamemos
+#  Para llamarlo solo se le llama
+primerMetodo()
+segundoMetodo()
+print("Fin del programa")
 
 
