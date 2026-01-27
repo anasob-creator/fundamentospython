@@ -7,47 +7,27 @@
 #  Que exista un punto después de la @
 #  Que el dominio sea de 2 a 3 caracteres (es/com/org)
 # Pedimos el email al usuario
+print("Validación email")
 email=input("Escribe tu email: ")
 print("------------------ ERRORES ----------------")
-if contiene_arroba ==-1:
-    print("OJO!! -------- El email no contiene ARROBA")
-elif contiene_punto ==-1:
-    print("OJO!! --------  El email no contiene PUNTO")
-elif comienza_arroba==True:
-    print("OJO!! --------  El email comienza con @, corrígelo")
-elif termina_arroba==True:
-    print("OJO!! --------  El email termina con @, corrígelo: ")
-elif posicion_punto==True:
-    print("OJO!! --------  El email termina con @, corrígelo: ")
-
-def validar_punto_post_arroba(email):
-    # 1. Buscamos la posición de la arroba
-    posicion_arroba = email.find("@")
-    
-    # 2. Buscamos la posición del último punto
-    posicion_punto = email.rfind(".")
-
-    # VALIDACIONES:
-    # Si no hay arroba, find devuelve -1
-    if posicion_arroba == -1:
-        return False
-    
-    # Si el punto está antes de la arroba o no existe (-1)
-    elif posicion_punto < posicion_arroba:
-        return False
-    
-    # Si el punto está inmediatamente después de la arroba (ej: u@.com)
-    # y queremos evitarlo
-    elif posicion_punto == posicion_arroba + 1:
-        return False
-
+if email.find("@") ==-1:
+    print("no existe @")
+elif email.count("@") ==0:
+    print("no existe @ en el email")
+elif email.find(".") ==-1:
+    print("no existe .")
+elif email.startswith("@") or email.endswith("@"):
+    print("no existe @")
+elif (email.find("@") != email.rfind("@")):
+    print ("existe más de una @")
+elif (email.rfind(".")>email.find(".")):
+    print ("Debe existir solo un punto después de la @")
+else:
+    ultimo_punto=email.rfind(".")
+    dominio=email[ultimo_punto+1:]
+    longitud_dominio=len(dominio)
+    if(longitud_dominio>=2 and longitud_dominio<=3):
+        print("email correcto")
     else:
-        return True
-
-# Pruebas
-print(validar_punto_post_arroba("usuario@dominio.com"))  # True
-print(validar_punto_post_arroba("usuario.nombre@dominio")) # False (punto antes)
-print(validar_punto_post_arroba("usuario@dominio"))      # False (sin punto)
-
-
-
+        print("El dominio debe ser de 2 o 4 caracteres")
+print (" fin del programa")
