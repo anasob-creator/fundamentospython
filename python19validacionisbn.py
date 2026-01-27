@@ -27,8 +27,6 @@ else:
     if suma % 11 == 0:
         print("El ISBN es correcto")
     else:
-        print("El ISBN es correcto")
+        print("El ISBN no es correcto")
 print("fin del programa")
-
-
 
