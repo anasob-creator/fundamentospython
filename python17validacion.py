@@ -8,35 +8,6 @@
 #  Que el dominio sea de 2 a 3 caracteres (es/com/org)
 # Pedimos el email al usuario
 email=input("Escribe tu email: ")
-#busco si contiene la arroba
-contiene_arroba=email.find("@")
-print("El email contiene @: ", contiene_arroba)
-#busco si contiene puento
-contiene_punto=email.find(".")
-print("El email contiene un punto: ", contiene_punto)
-#busco si empieza por arroba
-comienza_arroba=email.startswith("@")
-print("El email comienza @: ", comienza_arroba)
-#busco si termina por arroba
-termina_arroba=email.endswith("@")
-print("El email termina @: ", termina_arroba)
-# cuento si las arrobas
-contador_arroba=email.count("@")
-print("La arroba aparece este número de veces: ", contador_arroba)
-#busco el índice de la arroba
-print("find(@, index):", email.find("@", 1))
-#busco la subcadena a partir de al arroba
-subcadena=email[3:]
-print("email [3:]", subcadena)
-#busco si hay punto tras la arroba
-posicion_punto = email.rfind(".")
-print("El email contiene un punto tras la arroba: ", posicion_punto)
-# a partir del punto extraigo subcadena dominio
-#busco el índice del punto
-print("find(., index):", email.find(".", 1))
-#busco la subcadena a partir del punto
-dominio=email[3:]
-print("email [3:]", dominio)
 print("------------------ ERRORES ----------------")
 if contiene_arroba ==-1:
     print("OJO!! -------- El email no contiene ARROBA")
