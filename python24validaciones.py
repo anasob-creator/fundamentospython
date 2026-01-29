@@ -1,12 +1,17 @@
-# programa main validaciones
-# Tendremos un métdodo qu eserá validar el isbn tru/false
-# 2. un método que recibirá el número de dni y nos devolverá la letra
-# 3. Tendremos un met. que nos dirá si un dni es correcto. Enviaremos todo el DNI: 12344555X y nos dirá si es true o false.
-# programa main
-from libreria24validaciones import validarDni
-print("Programa de validaciones")
-print("Encuentra la letra del DNI")
-print("Dame tu número del DNI")
-dni=int(input())
-validarDni()
-print("Fin del progrma")
+def validarISBN(isbn):
+    if (len(isbn) != 10):
+        return False
+    else:
+        suma = 0
+        for i in range(len(isbn)):
+            #recuperamos cada caracter
+            caracter = isbn[i]
+            #convertimos a numero el caracter
+            numero = int(caracter)
+            multi = numero * (i + 1)
+            suma = suma + multi
+        #Preguntamos si la suma es divisible entre 11
+        if (suma % 11 == 0):
+            return True
+        else:
+            return False
