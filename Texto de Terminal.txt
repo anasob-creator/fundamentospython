@@ -1,0 +1,24 @@
+Last login: Thu Jan 29 15:31:30 on console
+tardes@iMac-de-CAS-14 ~ % 
+tardes@iMac-de-CAS-14 ~ % cd Documents/fundamentospython 
+tardes@iMac-de-CAS-14 fundamentospython %       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
