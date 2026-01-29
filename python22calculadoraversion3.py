@@ -1,14 +1,3 @@
-# Versión 23 de la calculadora
-# Si el usuario no mete ningún número pedimos números hasta que sea correcto
-# Creamos otra opció má para que el usurio pueda introducir nuevos números
-# Pediremos dos números al usuario
-# Mostraremos un menú con las siguientes opciones
-# 1.- Sumar
-# 2.- Restar
-# 3.- Multiplicar
-# Tendremos cuatro funciones, tres return con las operaciones y otra para mostrar el menú
-# Primero creamos los métodos
-#Sumar
 def sumarNumeros(num1, num2):
     suma = num1 + num2
     return suma
