@@ -15,3 +15,10 @@ def validarISBN(isbn):
             return True
         else:
             return False
+def validarDNI(dni):
+    #( nº DNI - (ENTERO(nº DNI / 23) * 23
+    resultado = dni - ((dni / 23) * 23)
+    if (resultado == 0):
+        return"T"
+    elif (resultado == 1):
+        return"R"
