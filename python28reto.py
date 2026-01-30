@@ -22,4 +22,8 @@ while (inicial<=numero_final):
     inicial=inicial+1
 print("Fin del programa")
 
-#calculo narcisista
+#1. pido rango de números
+#2. los meto en una lista
+#3. la voy recorriendo
+#4. lanzo el def con un cálculo que:
+    #5. cada uno lo separo los 
