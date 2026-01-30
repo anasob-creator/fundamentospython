@@ -3,7 +3,8 @@
 print("Rango de número pares")
 inicio=6
 numero_final=20
-# que tipo de bucle podríamos utlizar? Cualquiera, pero es más sencillo con un bucle for porque sabemos el número de repeticiones
+# que tipo de bucle podríamos utlizar? Cualquiera, pero es más sencillo con un bucle for 
+# porque sabemos el número de repeticiones
 print("Números pares entre ", inicio, " y ", numero_final)
 for i in range(inicio, numero_final+1):
     # preguntamos si el número es par
