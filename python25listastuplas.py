@@ -48,4 +48,37 @@ print("tupla[1] :", tupla[1])
 # la tupla no se puede modificar
 print(tupla)
 #  Son útiles para manejar múltiples objetos de un golpe
-
+# # # Diccionarios
+provincias=dict()
+provincias={
+        924: "Badajoz",
+        956:"Alicante",
+        976:"Zaragoza"
+}
+# Podemos recuperar solas claves (keys()) o solo los values())
+for claves in provincias.keys():
+        print("Prefijo: ", claves)
+        print("------------------------")
+for valores in provincias.values():
+        print("Provincias: ", valores)
+#  setdefault inserta
+provincias.setdefault
+# pop elimina un elemento en el diccionario por su key
+provincias.pop(956)
+print(provincias)
+# clear elimina todo el diccionario
+provincias.clear()
+print(provincias)
+# Cuando hablamos de objetos conjuntos existe un tercer tipo de bucle llamado referencia
+# En lugar de recorrer por una condición o contador lo realiza una a una, mostrando cada elemento del conjunto
+for i in range(len(tupla)):
+        elem=tupla[i]
+        print(elem)
+# En este bucle estamos recorriendo con un contador y almacenando cada elemento dentro de una variable llamada Elem"
+# La variable elem es una variable de referencia, porque hace referencia a un elemento del conjunto.
+# Los bucles de referencia se utilizan cuando no me importa el contador, solo el contenido.
+# Quiero recorrer cada elemento de la tupla
+for elem in tupla:
+        print(elem)
+# en este último no coges la posición en la que estén.
+# Vale para las listas, para todos los conjuntos
