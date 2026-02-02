@@ -7,5 +7,5 @@ class Mascota:
         self.anyoAdopcion=0
     
     def getAnyosAdoptada(self):
-        anyoadopcion=(self.anyoNacimiento-self.anyoAdopcion)
+        anyoadopcion=(self.anyoAdopcion-self.anyoNacimiento)
         return anyoadopcion
