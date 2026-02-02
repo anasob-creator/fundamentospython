@@ -1,6 +1,11 @@
 from class31coche import Coche
+from class31deportivo import Deportivo
 print("Conduciendo...")
 car=Coche()
+depor=Deportivo()
+depor.arrancar()
+depor.acelerar()
+depor.turbo()
 car.marca="Pontiac"
 car.modelo="Firebird"
 print(car.marca+" "+car.modelo)
