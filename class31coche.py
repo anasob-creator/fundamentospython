@@ -10,6 +10,9 @@ class Coche:
         self.estado=True
         print("Coche arrancado")
 
+    def getVelocidadMaxima(self):
+        return 180
+
     def detener(self):
         self.estado=False
         self.velocidad=0
