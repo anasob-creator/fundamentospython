@@ -1,3 +1,5 @@
+# Esto es para descargar oracle en Mac
+# https://fjtoscano.medium.com/instalar-oracle-database-xe-en-mac-m1-d5d2d17fc00c
 from class32mes import Mes
 print("Trabajando con clases")
 # --------------------------------------------------------
