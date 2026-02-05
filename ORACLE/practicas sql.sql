@@ -38,3 +38,40 @@ SELECT * from DEPT;
 -- ya tenemos un dpto. sin empleado
 -- 40-produccion-granada
 --1111-aumno-50
+-- ahora metemos la consulta inicial con inner join
+select EMP.apellido, EMP.oficio, DEPT.dnombre, DEPT.loc
+from EMP
+INNER JOIN DEPT
+ON EMP.DEPT_NO=DEPT.DEPT_NO; 
+-- ahora metemos la consulta inicial con left join
+select EMP.apellido, EMP.oficio, DEPT.dnombre, DEPT.loc
+from EMP
+LEFT JOIN DEPT
+ON EMP.DEPT_NO=DEPT.DEPT_NO; 
+-- ahora metemos la consulta inicial con right join
+select EMP.apellido, EMP.oficio, DEPT.dnombre, DEPT.loc
+from EMP
+RIGHT JOIN DEPT
+ON EMP.DEPT_NO=DEPT.DEPT_NO; 
+-- ahora metemos la consulta inicial con full join
+select EMP.apellido, EMP.oficio, DEPT.dnombre, DEPT.loc
+from EMP
+FULL JOIN DEPT
+ON EMP.DEPT_NO=DEPT.DEPT_NO; 
+-- ahora metemos la consulta inicial con cross join
+select EMP.apellido, EMP.oficio, DEPT.dnombre, DEPT.loc
+from EMP
+FULL JOIN DEPT
+ON EMP.DEPT_NO=DEPT.DEPT_NO; 
+-- visualizar la suma salarial de cada persona de la plantilla por cada nombre de hospital
+SELECT sum(PLANTILLA.SALARIO) as SUMASALARIAL, HOSPITAL.NOMBRE
+from PLANTILLA
+inner join HOSPITAL
+on PLANTILLA.HOSPITAL_COD=HOSPITAL.HOSPITAL_COD
+group by HOSPITAL.NOMBRE;
+-- nº empleados que trabajan por loc
+SELECT count(*) as PERSONAS, DEPT.loc
+from EMP
+inner join DEPT
+ON EMP.DEPT_NO=DEPT.DEPT_NO
+group by DEPT.LOC;
