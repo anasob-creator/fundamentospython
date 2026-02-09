@@ -96,10 +96,10 @@ HOSPITAL_COD not in (select HOSPITAL_COD from HOSPITAL);
 -- POr último tenemos una instrucción para eliminar todos los registros de una tabla de la forma 
 -- más rápida, porque no tienen ROLLBACK. 
 -- TRUNCATE TABLE NOMBRETABLA
-delete from HOSPITAL;
-ROLLBACK;
+//delete from HOSPITAL;
+--ROLLBACK;
 -- rollback  recupera el delete, lo que no pasaría con el truncate
-select * from HOSPITAL;
+--select * from HOSPITAL;
 -------------------------------------------------------------------
 - 1.  Dar de alta con fecha actual al empleado José Escriche Barrera como 
 --programador perteneciente al departamento de producción.  
