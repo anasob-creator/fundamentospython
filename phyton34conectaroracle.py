@@ -6,3 +6,5 @@ connetion=oracledb.connect(user="SYSTEM"
                            , password="oracle"
                            , dsn="localhost/FREEPDB1")
 print("Estamos conectados!!!")
+cursor=connetion.cursor()
+cursor.execute(SQL)
