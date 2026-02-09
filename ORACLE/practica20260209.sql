@@ -89,9 +89,7 @@ COMMIT;
 -- 2. una vez insertado elminiar de la plantilla todas las personas
 -- que no tienen un hospital asignado.
 delete from PLANTILLA where HOSPITAL_COD is NULL;
-
-
-
-
-
-
+-- Si queremos aquellos cuyo código de hospital no esté en la tabla hospital
+delete from PLANTILLA where HOSPITAL_COD is NULL OR
+HOSPITAL_COD not in (select HOSPITAL_COD from HOSPITAL);
+-- Así recuperaríamos también aquellos que tengan un código que no existe en HOSPITAL
