@@ -1,0 +1,97 @@
+-- Insertar todos los valores de la fila (todos los datos de la tabla)
+-- esta sintaxix utiliza la tabla como base
+select * from HOSPITAL;
+-- Con todos los datos
+insert into DEPT values (50, 'Python', 'Alcobendas');
+select * from DEPT;
+-- con algunos valores
+insert into DEPT (DEPTO_NO,LOC) values (51, 'Alicante');
+-- no son permanentes hasta que diga commit o rollback (guardar o deshacer)
+COMMIT;
+-- dentro de las consultas de acción existe una herramienta, que son las subconsultas
+-- son muy útiles en las consultas de acción y no son recomendables en las de 
+-- selección
+-- podemos recuperar datos dinámicos de la tabla/s para utlizarlo en acciones
+-- Tenemos una nueva persona en plantilla (Lopez) y su función es ENFERMERA
+-- de tarde, hospital 22. Insertar este reg. con el max ID disponible de la tabla
+-- PLANTILLA. Salario de 150000. 
+-- NEcesito saber qué datos tiene esta tabla.
+-- Tengo todos los datos menos el id, lo busco
+select * from PLANTILLA;
+select max(EMP_NO) + 1 from PLANTILLA;
+-- 9902
+-- aquí inserto
+commit;
+insert into PLANTILLA
+(HOSPTIAL_COD, SALA_COD, APELLIDO, FUNCION,
+TURNO, SALARIO, EMPLEADO_NO)
+values (22, 6, 'lopez', ENFERMERA, 'T', 150000, (select max(EMP_NO) + 1 from PLANTILLA));
+--- Borrado
+delete from PLANTILLA;
+rollback;
+delete from PLANTILLA where APELLIDO='lopez';
+-- podemos utilizar subconsultas
+-- eliminar toda la plantilla del hospital El Carmen
+delete from PLANTILLA where HOSPITAL_COD=
+(select HOSPITAL_COD from HOSPITAL where NOMBRE='El Carmen');
+-- update
+-- modifica 0 1 o varias filas de una tabla.
+-- En la misma consulta podemos indicar que deseamos modificar más de una columna
+-- sintaxis update TABLA set CAMPO1=VALOR1, CAMPO2=VALOR2
+-- Si no ponemos where, modifica todos los regs. de la tabla
+-- Subir en 1 el salario de la plantilla (todos)
+update PLANTILLA set SALARIO=SALARIO + 1;
+-- todos los enfermeros de la plantilla pasarán a ser enfermeras y se les sube el sueldo
+-- en 1
+update PLANTILLA set FUNCION='ENFERMERA', SALARIO=SALARIO + 1
+where FUNCION='ENFERMERO';
+-- con subconsultas
+-- En el set solo puede devolver un solo valor la subconsulta.
+-- ejemplo
+-- los empleados de la sala 4 se han puesto en huelga. 
+-- Dicen que su compi Karplus cobra más que ellos
+-- Modificar el salario de los empleados de la sala 4 poniendo el 
+-- mismo salario que Karplus
+update PLANTILLA set SALARIO=
+(select SALARIO from Plantilla where APELLIDO='diaz b.')
+where SALA_COD=4;
+SELECT * FROM PLANTILLA;
+select * from sala;
+-- modificar el turno a mañana a todos los de la plantilla
+-- de la sala de psiquiatría
+-- como hay varios valores de psiquiatría, porque hay varios hospitales, 
+-- hay que poner un IN en lugar de un =
+update PLANTILLA set TURNO=
+(select TURNO from Plantilla where TURNO='M')
+where SALA_COD IN
+(select SALA_COD from SALA where NOMBRE='psiquiatria');
+-- Ejemplos:
+-- 1. insertar un nuevo empleado de la plantilla
+--  Su nombre es cabrales, queremos que sea sala 4, turno noche
+-- trabajará en el hospital el carmen, 
+-- El id el máximo libre
+-- 2. una vez insertado elminiar de la plantilla todas las personas
+-- que no tienen un hospital asignado.
+select * from PLANTILLA;
+select max(EMPlEADO_NO) + 1 from PLANTILLA;
+-- 9902
+commit;
+insert into PLANTILLA
+(HOSPITAL_COD, SALA_COD, APELLIDO,
+TURNO, EMPLEADO_NO)
+values (
+(select HOSPITAL_COD from HOSPITAL where NOMBRE='El Carmen'), 
+4, 'cabrales', 'T', 
+(select max(EMPlEADO_NO) + 1 from PLANTILLA));
+select * from PLANTILLA;
+SELECT * FROM HOSPITAL;
+COMMIT;
+-- 2. una vez insertado elminiar de la plantilla todas las personas
+-- que no tienen un hospital asignado.
+delete from PLANTILLA where HOSPITAL_COD is NULL;
+
+
+
+
+
+
