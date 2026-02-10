@@ -47,12 +47,18 @@ cursor.execute(sql)
 #     print ("Leer filas... ")
 #     row=cursor.fetchone()
 # 2. For
-for row in cursor:
-    print (row)
-# también podemos extraer los datos de alguna 
-# columna mediante su índice
-    print (row[0])#DEPT_NO
-    print (row[1])#Dnombre
+# for row in cursor:
+#     print (row)
+# # también podemos extraer los datos de alguna 
+# # columna mediante su índice
+#     print (row[0])#DEPT_NO
+#     print (row[1])#Dnombre
+# 3. Recorrer con variables nuestra consulta
+# Nuestra consulta es nº, nombre y loc, 3 columnas
+# Le puedo decir que quiero recorrer eso, dentro dl cursor
+for numero, nombre, localidad in cursor:
+    print(nombre,localidad)
+# estoy declarando una variable por cada columna y pinto la que quiero
 # siempre que finalicemos las acciones, debemos 
 # liberar los recursos
 # si quiero reutilizarlo hay que liberar los cursores.
