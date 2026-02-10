@@ -30,3 +30,7 @@ else:
 cursor.close()
 connection.close()
 print ("Fin del programa")
+# si nos vamos a comprobar a la base de datos, no se grabará 
+# hasta que introduzcamos commit o rollback en nuestras acciones. 
+# Por lo tanto, hay que darle un commit o rollback
+
