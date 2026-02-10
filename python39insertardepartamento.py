@@ -25,10 +25,10 @@ sql=f"insert into DEPT values ({id}, '{nombre}', '{localidad}')"
 print(sql)
 # realizamos la acción de insertar
 cursor.execute(sql)
-# Como voy a mostrar la tabla con los hospitales...
+# Como voy a mostrar la tabla con los depts...
 # realizo también el commit y lo dejo permanente.
 connection.commit()
-# Ahora nos traemos todos los datos de los hospitales
+# Ahora nos traemos todos los datos de los dpts
 sql="select * from DEPT"
 cursor.execute(sql)
 # recorremos los regsistros
