@@ -1,2 +1,2 @@
 -- consulta de test para probar
-select INSCRIPCION, APELLIDO, DIRECCION from ENFERMO;
+select APELLIDO, DIRECCION from ENFERMO where INSCRIPCION= 10995;
