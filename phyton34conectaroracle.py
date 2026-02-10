@@ -21,20 +21,38 @@ cursor.execute(sql)
 # tenemos un método llamado fetchone() que se mueve una fila 
 # cada vez que lo ejecutamos 
 # y nos devuelve dicha fila en la que estamos posicionados
-row = cursor.fetchone() #primera fila, vamos a pintarla
-print(row)
-row = cursor.fetchone()#segunda fila, vamos a pintarla
-print(row)
-row = cursor.fetchone()#tercera fila
-print(row)
-row = cursor.fetchone()#cuarta fila
-print(row)
-# qué sucede si paso de fila a la siguiente? si no hay más filas
-row = cursor.fetchone()
-print(row)
-row = cursor.fetchone()
-print(row)
+# row = cursor.fetchone() #primera fila, vamos a pintarla
+# print(row)
+# row = cursor.fetchone()#segunda fila, vamos a pintarla
+# print(row)
+# row = cursor.fetchone()#tercera fila
+# print(row)
+# row = cursor.fetchone()#cuarta fila
+# print(row)
+# # qué sucede si paso de fila a la siguiente? si no hay más filas
+# row = cursor.fetchone()
+# print(row)
+# row = cursor.fetchone()
+# print(row)
 # pinta none, que es el null de python
+# Quiero recorrer las filas, pero lo quiero hacer con un bucle.
+# El problema es que Cuando ya he llegado al final, no puedo volver atrás.
+#  Comentarios en bloque. Selección Command + k + c
+#  Descomentar: Command + k + u (en windows control)
+#  Ahora comentamos todos los códigos de row los comentamos.
+#  Entonces, para leer va hasta None, si queremos leer todos los registros
+# 1. while
+# row=cursor.fetchone()
+# while (cursor.fetchone() != None):
+#     print ("Leer filas... ")
+#     row=cursor.fetchone()
+# 2. For
+for row in cursor:
+    print (row)
+# también podemos extraer los datos de alguna 
+# columna mediante su índice
+    print (row[0])#DEPT_NO
+    print (row[1])#Dnombre
 # siempre que finalicemos las acciones, debemos 
 # liberar los recursos
 # si quiero reutilizarlo hay que liberar los cursores.
