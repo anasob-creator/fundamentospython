@@ -14,7 +14,7 @@ connection= oracledb.connect(user="SYSTEM",
 cursor=connection.cursor()
 # pedimos los datos
 print("Hospital del empleado: ")
-hospital=input()
+hospital=int(input())
 print("Dame el incremento del sueldo: ")
 incremento=int(input())
 # Realizamos la acción de update el salario
@@ -25,7 +25,6 @@ registros=cursor.rowcount
 connection.commit()
 print(f"Empleados afectados: {registros}")
 sql="select * from PLANTILLA where HOSPITAL_COD=:codigo"
-print(sql)
 cursor.execute(sql, (hospital,))
 for row in cursor:
     print(f"Apellido: {row[3]}, Nuevo Salario: {row[6]}")
