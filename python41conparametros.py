@@ -1,3 +1,4 @@
+# Igual que el anterior, pero con parámetros
 # Vamos a realizar un ejemplo en el que mostraremos datos de 
 # empleados de un departamento
 # Pediremos al usuario el número de departamento
@@ -10,10 +11,10 @@ connection= oracledb.connect(user="SYSTEM",
 cursor=connection.cursor()
 # pedimos los datos
 print("Id del departamento")
-id=input() #88
-sql=f"select APELLIDO, OFICIO, DEPT_NO from EMP where DEPT_NO={id}"
+numero=int(input())
+sql=f"select APELLIDO, OFICIO, DEPT_NO from EMP where DEPT_NO=:deptno"
 print(sql)
-cursor.execute(sql)
+cursor.execute(sql,(numero,))
 for APELLIDO, OFICIO, DEPT_NO in cursor:
     print(f"Apellido: {APELLIDO}, Oficio: {OFICIO}, Departamento: {DEPT_NO}")
 cursor.close()
@@ -49,4 +50,5 @@ print("Fin programa")
 # tendríamos que pasarle en el execute del cursor los parámetros así:
 # cursor.execute(sql, (parametros))
 # Vamos a modificar en nuestro ejemplo porque a partir de ahora sin parámetros
+
 
