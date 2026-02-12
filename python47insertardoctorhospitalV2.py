@@ -5,13 +5,24 @@
 # el usuario selecciones a qué hospital quiere llevar al Doctor
 # 1. La Paz.
 # 2. San Carlos.
+# En la V1  estamos pidiendo . 
+# Queremos que el programa selecciones el id del doctor por mi.
+# El max +1. 
+# Quitamos la línea y metemos una consulta.
+# NEcesitamos saber el máx
 import oracledb
 connection=oracledb.connect(user="SYSTEM", password="oracle"
                             ,dsn="localhost/FREEPDB1")
 cursor=connection.cursor()
 # Pedimos los datos al usuario
+sql="select max(DOCTOR_NO)+1 as MAXIMO from DOCTOR"
+cursor.execute(sql)
+# Aquí no recorremos porque solo devuelve una fila
+row=cursor.fetchone()
+iddoctor=row[0]
+# Pedimos el resto de datos al usuario
 apellido=input("Introduzca el apellido: ")
-iddoctor=input("Id del Doctor:")
+# iddoctor=input("Id del Doctor:") eSto era para cuando lo pedíamos
 espe=input("Especialidad: ")
 salario=input("Salario: ")
 # Necesitamos mostrar los hospitales
