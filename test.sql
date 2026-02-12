@@ -21,3 +21,4 @@ where OFICIO='DIRECTOR';
 update PLANTILLA set SALARIO=SALARIO+10
 where HOSPITAL_COD='19';
 select * from DOCTOR;
+select max(DOCTOR_NO) as MAXIMO from DOCTOR;
