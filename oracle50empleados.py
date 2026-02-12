@@ -1,5 +1,3 @@
-
-    
 import oracledb
 class OracleEmpleados:
     def __init__(self):
