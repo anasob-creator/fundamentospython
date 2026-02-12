@@ -1,0 +1,13 @@
+Estructura para trabajar en Python
+
+Models: Son nuestras clases. Persona, mes coche
+Services:Son las clases de acceso a datos, tipo la de llamada a OracleXX. Son las que trabajana con datos.
+Main: Son los programas principales que ejecutan, los que tienen la capa visual
+
+
+Se trabaja con carpetas. La nomenclatura en Minúsculas, los paquetes son en Minúsculas
+En Python para generar un paquete de clases en una carpeta, 
+se debe crear un fichero llamado __init__.py 
+
+Hay que crear un nuevo proyecto con esta organización
+Creamos un nuevo proyecto llamado PythonBBDD
