@@ -18,3 +18,6 @@ update DEPT set loc='TERUEL'
 where DNOMBRE='VENTAS';
 update EMP set SALARIO=SALARIO+10
 where OFICIO='DIRECTOR';
+update PLANTILLA set SALARIO=SALARIO+10
+where HOSPITAL_COD='19';
+select * from DOCTOR;

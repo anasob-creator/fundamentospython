@@ -10,27 +10,27 @@ connection=oracledb.connect(user="SYSTEM", password="oracle"
                             ,dsn="localhost/FREEPDB1")
 cursor=connection.cursor()
 # Necesitamos una lista de oficios
-listaOficios=[]
+listaFuncion=[]
 # Agregamos oficios
 sql="select distinct FUNCION from PLANTILLA"
 cursor.execute(sql)
 # recorremos y por cada oficio append
 for row in cursor:
     # Agregamaos cada oficio
-    listaOficios.append(row[0])
+    listaFuncion.append(row[0])
     # Creamos un contador
 contador=1
-for ofi in listaOficios:
+for ofi in listaFuncion:
     print(f"{contador}.- {ofi}")
     contador=contador+1
 print("Seleccione una opción: ")
 opcion=int(input())
-funcionSeleccionada=listaOficios[opcion - 1]
+funcionSeleccionada=listaFuncion[opcion - 1]
 print(f"Opción seleccionada: {funcionSeleccionada}")
-# Consultamos los empleados con el oficio oficioSeleccionado
+# Consultamos los empleados con la función funcionSeleccionada
 sql="select * from PLANTILLA where FUNCION=:funcion"
 cursor.execute(sql, (funcionSeleccionada,))
-print("----- LISTA  EMPLEADOS -----")
+print("----- PLANTILLA -----")
 for row in cursor:
     print(f" - {row[3]}, Salario: {row[6]}")
 cursor.close()
